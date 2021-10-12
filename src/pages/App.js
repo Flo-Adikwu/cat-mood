@@ -54,15 +54,15 @@ const App = () => {
         if (selectedText === "happy") {
             let filterCard = copiedCards.filter((c => c.key === "happy"));
             const _cards = [...filterCard, ...cardArr]
-            setCardArr([..._cards])
+            setCardArr([...new Set([..._cards])])
         } else if (selectedText === "indifferent") {
             let filterCard = copiedCards.filter((c => c.key === "indifferent"));
             const _cards = [...filterCard, ...cardArr]
-            setCardArr([..._cards])
+            setCardArr([...new Set([..._cards])])
         } else if (selectedText === "sad") {
             let filterCard = copiedCards.filter((c => c.key === "sad"));
             const _cards = [...filterCard, ...cardArr]
-            setCardArr([..._cards])
+            setCardArr([...new Set([..._cards])])
         }
         else setCards(cards);
     }
